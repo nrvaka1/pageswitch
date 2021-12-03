@@ -7,7 +7,7 @@ router.post('/print', async (req, res) => {
 
     database.nameret(2, results => {
         //  console.log(' Order ID Server : ' + results.valid);
-        console.log(" Data from Client " + results[0].name + " : " + req.body.Custdata[0].OI)
+        console.log(" Data from Client " + results[0].fname + " : " + req.body.Custdata[0].OI)
         res.json(results);
     })
 });
@@ -17,7 +17,7 @@ router.get('/print1', async (req, res) => {
     console.log(' print1: abncnd ' );
     database.nameret(2, results => {
         //  console.log(' Order ID Server : ' + results.valid);
-        console.log(" Data from Client : " + results[0].name )
+        console.log(" Data from Client : " + results[0].fname )
         res.json(results);
     })
 });

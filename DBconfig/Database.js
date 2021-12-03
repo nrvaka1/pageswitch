@@ -1,5 +1,5 @@
 let Mysql = require('mysql')
-let DatabaseSettingsLocal = require('../DBconfig/dbms.json')
+let DatabaseSettingsLocal = require('../DBconfig/dbmsrds.json')
 
 module.exports = class Database {
 
@@ -8,6 +8,7 @@ module.exports = class Database {
         this.pool = Mysql.createPool({
             host: this.currentSettings.Host,
             user: this.currentSettings.User,
+            port: this.currentSettings.port,
             password: this.currentSettings.Password,
             database: this.currentSettings.Database,
         });
