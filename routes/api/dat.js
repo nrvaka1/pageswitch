@@ -22,4 +22,8 @@ router.get('/print1', async (req, res) => {
     })
 });
 
+router.post('/test', (req, res) => {
+    console.log(' print1: abncnd ');
+});
+
 module.exports = router;
