@@ -21,7 +21,7 @@ app.use('/api', datp);
 
 //const PORT = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 4000;
 
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 3000
 
 //const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 4000;
 
