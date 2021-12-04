@@ -1,4 +1,4 @@
- const express = require('express');
+const express = require('express');
 const path = require('path');
 const datp = require('./routes/api/dat');
 const cors = require('cors');
@@ -18,10 +18,14 @@ app.use(cookieParse());
 app.use('/api', datp);
 
 // start server
-//const PORT = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 4000;
 
-const PORT = process.env.PORT || 4000
+const PORT = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 4000;
+
+//const PORT = process.env.PORT || 4000
 
 //const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 4000;
 
-app.listen(PORT);
+const server = app.listen(port, function () {
+    console.log('Server listening on port ' + port);
+});
+//app.listen(PORT);
