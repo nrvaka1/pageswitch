@@ -23,7 +23,9 @@ app.use('/api', datp);
 
 // const PORT = process.env.PORT || 4000;
 
-const PORT = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 4000;
+//http://127.0.0.1:4000/api/test
+
+const PORT = process.env.NODE_ENV === 'production' ? 80 : 4000;
 
 const server = app.listen(PORT, function () {
     console.log('Server listening on port ' + PORT);
