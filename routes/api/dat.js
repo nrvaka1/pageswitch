@@ -20,6 +20,8 @@ router.get('/print1', async (req, res) => {
         console.log(" Data from Client : " + results[0].fname)
         res.json(results);
     })
+
+    database.WriteOrder("Nandishvara")
 });
 
 router.post('/test', (req, res) => {

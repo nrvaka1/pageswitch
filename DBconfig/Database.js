@@ -34,4 +34,15 @@ module.exports = class Database {
             });
         });
     }
+
+    WriteOrder(name) {
+        this.Connect(connection => {
+            let query = "INSERT INTO collect (fname) VALUES (?)";
+
+            connection.query(query, [name], (error, results) => {
+                connection.release();
+                if (error) throw error;
+            });
+        });
+    }
 }
